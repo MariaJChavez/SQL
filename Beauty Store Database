@@ -1,0 +1,28 @@
+--Create a Beauty Store Database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXt, category INTEGER, list_price INTEGER, best_sellers INTEGER);
+
+INSERT INTO store VALUES (1, "lipstick", "makeup", 21.00, 983 );
+INSERT INTO store VALUES (2, "eyeshadows", "makeup", 52.00, 1001);
+INSERT INTO store VALUES (3, "moisturizer", "skin care", 38.00,  443);
+INSERT INTO store VALUES (4, "makeup brushes", "tools", 6.99, 779);
+INSERT INTO store VALUES (5, "makeup remover", "skin care", 11.00, 1073);
+INSERT INTO store VALUES (6, "eyebrow pencil", "make up", 25.00 ,923);
+INSERT INTO store VALUES (7, "eyeliners", "make up", 22.00, 2491);
+INSERT INTO store VALUES (8, "sunscreen", "skin care", 36.00, 228);
+INSERT INTO store VALUES (9, "nail polish", "nails", 5.24, 523);
+INSERT INTO store VALUES (10, "shampoo", "hair", 30.00, 2238);
+INSERT INTO store VALUES (11, "hairspray","hair", 19.99, 179);
+INSERT INTO store VALUES (12, "flat irons", "tools", 250.00, 213);
+INSERT INTO store VALUES (13, "hair roller", "tool", 59.99, 100);
+INSERT INTO store VALUES (14, "eye cream", "skin care", 80.00,576);
+INSERT INTO store VALUES (15, "nail file", "nails", 12.22, 302);
+
+--Display the database
+SELECT * FROM store;
+
+--Display the database ordered by category and list price
+SELECT name,category, list_price FROM store ORDER BY category;
+
+--Display the database ordered by best sellers 
+SELECT name, list_price, best_sellers FROM store ORDER BY best_sellers desc 
